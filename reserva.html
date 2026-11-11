@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Completar Reserva | Hotel Leyre Pamplona</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> <!--REF DE BOOSTRAP-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> <!-- BOOTSTRAP ICONS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&family=Barlow:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet"> <!-- GOOGLE FONTS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" /> <!-- GOOGLE ICONS -->
+
+  <link href="estilos.css" rel="stylesheet"> <!-- CSS -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> <!-- JAVA SCRIPT -->
+  <script src="header.js"></script>
+  <script src="footer.js"></script>
+</head>
+<body>
+
+<!-- ===================== CABECERA ===================== -->
+<div id="header"></div>
+
+<!-- ===================== COMPLETAR RESERVA ===================== -->
+<section class="py-5 bg-leyre-claro">
+  <div class="container">
+
+    <div class="mb-4">
+      <h2 class="fs-4 fw-bold text-uppercase mb-1">Completar Reserva</h2>
+      <p class="texto-pequeno text-muted mb-0">Por favor, introduce tus datos para confirmar tu estancia en el Hotel Leyre.</p>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-12 col-lg-7">
+        
+        <!-- DATOS DEL CLIENTE -->
+        <div class="bg-white p-4 shadow-sm mb-4">
+          <h3 class="fs-5 fw-bold text-uppercase border-bottom pb-2 mb-3">1. Datos del Titular</h3>
+          
+          <form id="formReserva">
+            <div class="row g-3">
+              <div class="col-12 col-md-6">
+                <label for="nombre" class="form-label texto-pequeno fw-bold text-uppercase mb-1">Nombre</label>
+                <input type="text" class="form-control rounded-0 shadow-none" id="nombre" placeholder="Nombre" required>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label for="apellidos" class="form-label texto-pequeno fw-bold text-uppercase mb-1">Apellidos</label>
+                <input type="text" class="form-control rounded-0 shadow-none" id="apellidos" placeholder="Apellidos" required>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label for="email" class="form-label texto-pequeno fw-bold text-uppercase mb-1">Correo Electrónico</label>
+                <input type="email" class="form-control rounded-0 shadow-none" id="email" placeholder="ejemplo@correo.com" required>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label for="telefono" class="form-label texto-pequeno fw-bold text-uppercase mb-1">Teléfono</label>
+                <input type="tel" class="form-control rounded-0 shadow-none" id="telefono" placeholder="+34 600 000 000" required>
+              </div>
+
+              <div class="col-12">
+                <label for="peticiones" class="form-label texto-pequeno fw-bold text-uppercase mb-1">Peticiones especiales (opcional)</label>
+                <textarea class="form-control rounded-0 shadow-none" id="peticiones" rows="3" placeholder="Hora estimada de llegada, cama matrimonial, etc."></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- DATOS DE PAGO -->
+        <div class="bg-white p-4 shadow-sm">
+          <h3 class="fs-5 fw-bold text-uppercase border-bottom pb-2 mb-3">2. Método de Pago</h3>
+          
+          <div class="row g-3">
+            <div class="col-12">
+              <label for="tarjetaNombre" class="form-label texto-pequeno fw-bold text-uppercase mb-1">Titular de la Tarjeta</label>
+              <input type="text" class="form-control rounded-0 shadow-none" id="tarjetaNombre" placeholder="Tal como aparece en la tarjeta" required>
+            </div>
+
+            <div class="col-12">
+              <label for="tarjetaNumero" class="form-label texto-pequeno fw-bold text-uppercase mb-1">Número de Tarjeta</label>
+              <div class="input-group">
+                <input type="text" class="form-control rounded-0 shadow-none" id="tarjetaNumero" placeholder="0000 0000 0000 0000" required>
+                <span class="input-group-text bg-white rounded-0"><i class="bi bi-credit-card-2-front"></i></span>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <label for="tarjetaCaducidad" class="form-label texto-pequeno fw-bold text-uppercase mb-1">Caducidad</label>
+              <input type="text" class="form-control rounded-0 shadow-none" id="tarjetaCaducidad" placeholder="MM/AA" required>
+            </div>
+
+            <div class="col-6">
+              <label for="tarjetaCvc" class="form-label texto-pequeno fw-bold text-uppercase mb-1">CVC / CVV</label>
+              <input type="password" class="form-control rounded-0 shadow-none" id="tarjetaCvc" maxlength="4" placeholder="123" required>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-12 col-lg-5">
+        <div class="bg-white p-4 shadow-sm position-sticky" style="top: 20px;">
+          <h3 class="fs-5 fw-bold text-uppercase border-bottom pb-2 mb-3">Resumen de la Reserva</h3>
+
+          <!-- HABITACIÓN SELECCIONADA -->
+          <div class="d-flex gap-3 mb-3 pb-3 border-bottom">
+            <img src="img/imagenHabitacionUrban.jpg" class="object-fit-cover rounded-0" style="width: 100px; height: 75px;" alt="Habitación Urban">
+            <div>
+              <h4 class="fs-6 fw-bold text-uppercase mb-1">HABITACIÓN URBAN</h4>
+              <p class="texto-pequeno text-muted mb-0">1 Habitación | 2 Adultos</p>
+              <div class="d-flex gap-2 fs-6 text-dark mt-1">
+                <i class="bi bi-wifi" title="Wifi gratis"></i>
+                <i class="bi bi-snow" title="Aire acondicionado"></i>
+                <i class="bi bi-droplet-fill" title="Baño privado"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- DETALLES DE FECHA -->
+          <ul class="list-unstyled texto-pequeno mb-3 pb-3 border-bottom">
+            <li class="d-flex justify-content-between mb-2">
+              <span class="text-muted">Entrada:</span>
+              <strong class="text-dark">Mié, 28 Oct 2026</strong>
+            </li>
+            <li class="d-flex justify-content-between mb-2">
+              <span class="text-muted">Salida:</span>
+              <strong class="text-dark">Jue, 29 Oct 2026</strong>
+            </li>
+            <li class="d-flex justify-content-between">
+              <span class="text-muted">Duración:</span>
+              <strong class="text-dark">1 Noche</strong>
+            </li>
+          </ul>
+
+          <!-- DESGLOSE DE PRECIOS -->
+          <ul class="list-unstyled texto-pequeno mb-4">
+            <li class="d-flex justify-content-between mb-2">
+              <span class="text-muted">Habitación Urban (1 noche)</span>
+              <span>85,00€</span>
+            </li>
+            <li class="d-flex justify-content-between mb-2">
+              <span class="text-muted">Impuestos y tasas (10% IVA)</span>
+              <span>Incluido</span>
+            </li>
+            <li class="d-flex justify-content-between pt-2 border-top fs-5 fw-bold text-dark">
+              <span>TOTAL</span>
+              <span>85,00€</span>
+            </li>
+          </ul>
+
+          <!-- BOTÓN SUBMIT -->
+          <button type="submit" class="btn btn-dark w-100 py-3 fw-bold text-uppercase rounded-0 text-white" style="background-color: #000000; border-color: #000000; letter-spacing: 1.5px;">CONFIRMAR Y PAGAR</button>
+
+          <p class="texto-pequeno text-center text-muted mt-3 mb-0">
+            <i class="bi bi-shield-lock me-1"></i> Reserva segura. Cancelación gratuita hasta 24h antes.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<div id="footer"></div>
+
+
+</body>
+</html>
