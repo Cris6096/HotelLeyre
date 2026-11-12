@@ -32,7 +32,7 @@
       <p class="texto-pequeno text-muted mb-0">Por favor, introduce tus datos para confirmar tu estancia en el Hotel Leyre.</p>
     </div>
 
-    <div class="row g-4">
+    <form id="formReserva" class="row g-4">
 
       <div class="col-12 col-lg-7">
         
@@ -40,7 +40,6 @@
         <div class="bg-white p-4 shadow-sm mb-4">
           <h3 class="fs-5 fw-bold text-uppercase border-bottom pb-2 mb-3">1. Datos del Titular</h3>
           
-          <form id="formReserva">
             <div class="row g-3">
               <div class="col-12 col-md-6">
                 <label for="nombre" class="form-label texto-pequeno fw-bold text-uppercase mb-1">Nombre</label>
@@ -67,7 +66,6 @@
                 <textarea class="form-control rounded-0 shadow-none" id="peticiones" rows="3" placeholder="Hora estimada de llegada, cama matrimonial, etc."></textarea>
               </div>
             </div>
-          </form>
         </div>
 
         <!-- DATOS DE PAGO -->
@@ -161,10 +159,36 @@
         </div>
       </div>
 
-    </div>
+    </form>
 
   </div>
 </section>
+
+<!-- ===================== CONFIRMACIÓN DE COMPRA ===================== -->
+<div class="modal fade" id="compraConfirmada" tabindex="-1" aria-labelledby="compraConfirmadaTitulo" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-0">
+      <div class="modal-header border-0">
+        <h2 class="modal-title fs-5" id="compraConfirmadaTitulo">¡Compra confirmada!</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body text-center">
+        <i class="bi bi-check-circle text-success fs-1" aria-hidden="true"></i>
+        <p class="mb-0 mt-3">Tu reserva en el Hotel Leyre se ha confirmado correctamente.</p>
+      </div>
+      <div class="modal-footer border-0">
+        <a href="index.html"><button type="button" class="btn btn-dark rounded-0" data-bs-dismiss="modal">Aceptar</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById("formReserva").addEventListener("submit", function(event) {
+    event.preventDefault();
+    bootstrap.Modal.getOrCreateInstance(document.getElementById("compraConfirmada")).show();
+  });
+</script>
 
 <!-- ===================== FOOTER ===================== -->
 <div id="footer"></div>
