@@ -47,6 +47,7 @@ const headerMarkup = `
         <li class="nav-item"><a class="nav-link text-white" href="index.html#faq">FAQs</a></li>
       </ul>
 
+      <a class="header-reservar d-none d-lg-inline-flex align-items-center justify-content-center text-white text-decoration-none fw-bold" href="disponibles.html">Reservar</a>
       <a class="texto-pequeno text-white text-decoration-none" href="tel:+34948228500">(+34) 948 22 85 00</a>
     </div>
   </nav>

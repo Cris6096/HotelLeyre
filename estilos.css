@@ -27,9 +27,14 @@ h1 { font-size: clamp(1.6rem, 4vw, 2.6rem); }
 h2 { font-size: clamp(1.25rem, 3vw, 2rem); }
 h3 { font-size: clamp(1.1rem, 2vw, 1.4rem); }
 
+p:not(.texto-pequeno) {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
 .texto-pequeno {
   font-family: "Montserrat", sans-serif;
-  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+  font-size: 0.9375rem;
 }
 
 .iconos-beneficios .material-symbols-outlined,
@@ -52,6 +57,7 @@ h3 { font-size: clamp(1.1rem, 2vw, 1.4rem); }
 #faq details > p {
   color: #404047;
   font-family: "Inter", sans-serif;
+  font-size: 0.9375rem;
   font-weight: 400;
 }
 
@@ -93,5 +99,96 @@ h3 { font-size: clamp(1.1rem, 2vw, 1.4rem); }
   letter-spacing: normal;
 }
 .site-header .texto-pequeno {
-  font-size: clamp(0.7rem, 1.5vw, 0.85rem);
+  font-size: 0.9375rem;
+}
+.site-header form .texto-pequeno,
+.site-header form .form-control,
+.site-header form .form-select,
+.site-header form .btn-leyre,
+.site-header #menuLateral .offcanvas-body > div a {
+  font-size: 0.9375rem;
+}
+
+footer {
+  font-size: 0.9375rem;
+}
+footer .texto-pequeno {
+  font-size: 0.9375rem;
+}
+
+@media (min-width: 992px) {
+  .site-header > .navbar {
+    position: fixed !important;
+    top: 2rem !important;
+    left: 1rem !important;
+    width: calc(100% - 2rem) !important;
+    z-index: 1030 !important;
+    padding-block: 0.65rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 0.5rem;
+    background-color: rgba(31, 31, 31, 0.4);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(6px);
+  }
+
+  .site-header > .navbar > .container {
+    gap: 1.5rem;
+  }
+
+  .site-header > .navbar .navbar-brand {
+    flex-shrink: 0;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+  }
+
+  .site-header > .navbar .navbar-nav {
+    align-items: center;
+    gap: clamp(1rem, 2vw, 2rem) !important;
+  }
+
+  .site-header > .navbar .navbar-nav .nav-link {
+    position: relative;
+    padding: 0.75rem 0.15rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+  }
+
+  .site-header > .navbar .navbar-nav .nav-link::after {
+    position: absolute;
+    right: 0.15rem;
+    bottom: 0.25rem;
+    left: 0.15rem;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.85);
+    content: "";
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 180ms ease;
+  }
+
+  .site-header > .navbar .navbar-nav .nav-link:hover::after,
+  .site-header > .navbar .navbar-nav .nav-link:focus-visible::after {
+    transform: scaleX(1);
+  }
+
+  .site-header > .navbar .header-reservar {
+    flex-shrink: 0;
+    padding: 0.65rem 1rem;
+    border: 1px solid #111;
+    border-radius: 0.25rem;
+    background-color: #111;
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .site-header > .navbar > .container > .texto-pequeno {
+    flex-shrink: 0;
+    padding-left: 1rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.35);
+    white-space: nowrap;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
+  }
 }

@@ -1,14 +1,14 @@
 const footerMarkup = `
 <footer id="contacto" class="bg-leyre-oscuro py-5 text-white">
   <div class="container">
-    <div class="row g-4 mb-5 align-items-start">
-      <div class="col-12 col-md-4 d-flex flex-column align-items-start align-items-md-center justify-content-center">
+    <div class="row g-4 align-items-start">
+      <div class="col-12 col-md-4 col-lg-2 d-flex flex-column align-items-start align-items-md-center justify-content-center">
         <span class="titulo text-white lh-1" style="font-family: Tangerine; font-style: italic; font-size: 2.5rem;">L</span>
         <span class="text-white small lh-1" style="letter-spacing: 2px; font-size: 0.6rem;">★★★</span>
       </div>
 
-      <div class="col-6 col-md-4">
-        <ul class="list-unstyled mb-0">
+      <div class="col-4 col-md-3 col-lg-2">
+        <ul class="list-unstyled texto-pequeno mb-0">
           <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
           <li class="mb-2"><a href="habitaciones.html" class="text-white text-decoration-none">Habitaciones</a></li>
           <li class="mb-2"><a href="index.html#faq" class="text-white text-decoration-none">FAQs</a></li>
@@ -16,7 +16,7 @@ const footerMarkup = `
         </ul>
       </div>
 
-      <div class="col-6 col-md-4">
+      <div class="col-8 col-md-5 col-lg-5>
         <p class="titulo mb-3 fw-bold">Contacto</p>
         <ul class="list-unstyled texto-pequeno mb-0">
           <li class="mb-3 d-flex align-items-start gap-2">
@@ -33,11 +33,9 @@ const footerMarkup = `
           </li>
         </ul>
       </div>
-    </div>
 
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-10 col-lg-8">
-        <div class="ratio ratio-16x9 overflow-hidden shadow-sm">
+      <div class="col-12 col-lg-3">
+        <div class="ratio ratio-16x9">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2903.245!2d-1.644!3d42.815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd50930777777777%3A0x0!2sC.+Leyre%2C+7,+31002+Pamplona,+Navarra!5e0!3m2!1ses!2ses!4v1234567890"
             style="border: 0;"
